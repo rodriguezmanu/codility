@@ -29,7 +29,8 @@ var X = 10,
     D = 30;
 
 function solution(x, y, d) {
-    return Math.ceil((y-x) / d);
+    return Math.ceil((y - x) / d);
 }
+
 //100% verified
 console.log(solution(X, Y, D));
