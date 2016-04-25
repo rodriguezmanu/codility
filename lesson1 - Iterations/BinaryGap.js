@@ -18,6 +18,8 @@
 // expected worst-case time complexity is O(log(N));
 // expected worst-case space complexity is O(1).
 
+// 100% verified
+
 'use strict';
 
 function solution(n) {
@@ -26,7 +28,6 @@ function solution(n) {
         count = 0,
         max = 0;
 
-    console.log(binary);
     for (var i = 0; i < array.length; i++) {
         if (array[i] == 1) {
             if (count > max) {
