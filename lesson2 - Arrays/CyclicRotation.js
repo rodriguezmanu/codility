@@ -16,20 +16,22 @@
 // each element of array A is an integer within the range [−1,000..1,000].
 // In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
+// 100% verified
+
 'use strict';
 
 function solution(a, k) {
     var l = a.length,
         c,
         i = 0;
-    if (l != 0) {
+    if (l !== 0) {
         while (i < k) {
             c = a.pop();
             a.unshift(c);
             i++;
         }
-        return a;
     }
+    return a;
 }
 
 var a = [3, 8, 9, 7, 6],
