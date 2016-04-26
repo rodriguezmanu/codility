@@ -24,20 +24,24 @@
 // expected worst-case space complexity is O(1), beyond input storage (not counting the storage required for input arguments).
 // Elements of input arrays can be modified.
 
-var array = [2, 3, 1, 5];
+// 100% verified
 
-function solution(A) {
-    result = 0;
-        if (!A || A.length == 0) return result;
-        np1 = A.length + 1;
-        sum = np1 * (1 + np1) / 2;
 
-        sumOfA = A.reduce(function(prev, current) {
-            return prev + current;
-        });
-        // console.log(sum, sumOfA);
-        result = sum - sumOfA;
-        return result;
+function solution(a) {
+    var sumExp = 0,
+        sum = 0,
+        n = a.length + 1;
+
+        for (var i = 0; i < a.length; i++) {
+            sumExp += a[i];
+        }
+        sum = n * (n + 1) / 2
+        return sum - sumExp;
 }
-//100% verified
-console.log(solution(array));
+
+var a = [2, 3, 1, 5],
+    b = [2, 3, 4],
+    c = [1, 2];
+    d = [];
+
+console.log(solution(d));
