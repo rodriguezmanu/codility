@@ -22,15 +22,16 @@
 // Complexity:
 // expected worst-case time complexity is O(1);
 // expected worst-case space complexity is O(1).
-'use strict';
 
-var X = 10,
-    Y = 85,
-    D = 30;
+//100% verified
+'use strict';
 
 function solution(x, y, d) {
     return Math.ceil((y - x) / d);
 }
 
-//100% verified
+var X = 10,
+    Y = 85,
+    D = 30;
+
 console.log(solution(X, Y, D));

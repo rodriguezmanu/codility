@@ -34,26 +34,30 @@
 // N is an integer within the range [2..100,000];
 // each element of array A is an integer within the range [−1,000..1,000].
 
-var A = [3, 1, 2, 4, 3];
+//100% verified
 
-function solution(A) {
-var sumTotal = 0;
-var sumk = 0;
-var res = [];
+function solution(a) {
+    var total = 0,
+        arr = [],
+        result = 0,
+        add = 0;
 
-    for (var i = 0; i < A.length; i++) {
-        sumTotal += A[i];
+    for (var i = 0; i < a.length; i++) {
+        total += a[i];
     }
-    for (var k = 0; k < A.length-1; k++) {
-        sumk += A[k];
-        res.push(Math.abs(sumk - (sumTotal - sumk)));
+    for (var i = 0; i <  a.length - 1; i++) {
+        total = (total - a[i]);
+        add += a[i];
+        result = Math.abs((total - add));
+        arr.push(result);
     }
-
-    return res.min(res);
+    return arr.min();
 }
+
 Array.prototype.min = function() {
   return Math.min.apply(null, this);
 };
 
-//100% verified
-console.log(solution(A));
+var a = [3, 1, 2, 4, 3];
+
+console.log(solution(a));

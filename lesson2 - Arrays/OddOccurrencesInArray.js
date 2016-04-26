@@ -34,10 +34,9 @@
 // Elements of input arrays can be modified.
 
 //100% verified
+'use strict';
 
 function solution(a) {
-    var b = [];
-
     a.sort();
     if (a.length !== 0) {
         for (var i = 0; i < a.length; i++) {
@@ -50,5 +49,7 @@ function solution(a) {
     }
     return a;
 }
+
 var a = [9, 3, 9, 3, 9, 7, 9];
+
 console.log(solution(a));
