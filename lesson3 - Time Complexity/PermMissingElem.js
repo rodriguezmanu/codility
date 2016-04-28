@@ -35,7 +35,7 @@ function solution(a) {
         for (var i = 0; i < a.length; i++) {
             sumExp += a[i];
         }
-        sum = n * (n + 1) / 2
+        sum = n * (n + 1) / 2;
         return sum - sumExp;
 }
 
