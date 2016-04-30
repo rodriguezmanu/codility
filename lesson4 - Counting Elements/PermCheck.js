@@ -48,6 +48,8 @@
 // expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
 // Elements of input arrays can be modified.
 
+// 100% verified
+
 function solution(a) {
     var n = a.length,
         sum = 0,
@@ -56,12 +58,12 @@ function solution(a) {
 
     for (var i = 0; i < a.length; i++) {
         sumA += a[i];
-        // if (o[a] === 1) {
-        //     return 0;
-        // }
-        // else {
-        //     o[a] = 1;
-        // }
+        if (o[a[i]] === 1) {
+            return 0;
+        }
+        else {
+            o[a[i]] = 1;
+        }
     }
     sum = n * (n + 1) / 2;
     if ((sum - sumA) === 0) {
@@ -71,48 +73,11 @@ function solution(a) {
     }
 }
 
-
-function solutionA(A) {
-    var sum = 0;
-    var numbers = {};
-
-    // A.sort();
-
-    // if (A[0] !== 1) {
-    //     return 0;
-    // }
-
-
-    for (var i = 0; i < A.length; i++) {
-        var a = A[i];
-        sum += a;
-        console.log(numbers[a]);
-        if (numbers[a] === 1) {
-            return 0;
-        }
-        else {
-            numbers[a] = 1;
-        }
-        console.log(numbers[a]);
-        console.log('---');
-    }
-
-    var n = A.length;
-    var sum_n = (n * (n + 1)) / 2;
-    var difference = sum_n - sum;
-
-    if (difference !== 0) return 0;
-
-    return 1;
-}
-
-
 var a = [4, 3, 1, 2];//1
 // var a = [4, 3, 1];//0
 // var a = [2, 3, 4];//0
 
 
 console.log(solution(a));
-// console.log(solutionA(a));
 
 
