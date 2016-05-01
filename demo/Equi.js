@@ -48,6 +48,7 @@
 // expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
 // Elements of input arrays can be modified.
 
+// 100% verified
 'use strict';
 
 function solution(a) {
