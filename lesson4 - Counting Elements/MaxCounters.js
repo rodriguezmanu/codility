@@ -73,11 +73,11 @@ function solution(n, a) {
         max = 0,
         nextMax = 0;
 
-    for (var i = 0; i < n; i++){
+    for (var i = 0; i < n; i++) {
         b[i] = 0;
     }
 
-    for (i = 0; i < a.length; i++){
+    for (i = 0; i < a.length; i++) {
         var index = a[i] - 1;
 
         if (a[i] === n + 1) {
