@@ -4,8 +4,8 @@ console.log(prefixSums(a));
 
 function prefixSums(a) {
     var n = a.length,
-        p = new Array(a.length + 1);
-    p.fill(0);//es6 way
+        p = new Array(a.length + 1).fill(0);//es6 way
+
     // for (var i = 0; i < p; i++) {//not es6
     //     p[i] = 0;
     // }
