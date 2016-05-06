@@ -42,7 +42,7 @@
 // expected worst-case time complexity is O(N);
 // expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
 // Elements of input arrays can be modified.
-'use strict';
+// 'use strict';
 
 function solution(a) {
     var minIndex = 0,
@@ -50,21 +50,20 @@ function solution(a) {
         n = a.length,
         n1 = n - 1,
         n2 = n - 2,
-        result = 0;
+        result = 0,
+        result2 = 0,
+        result3 = 0;
 
     for (var i = 0; i < n2; i++) {
         // Try the next 2-element slice
-        result = (a[i] + a[i + 1]) / 2;
-
-        if (minAvg > result) {
-            minAvg = result;
-            minIndex = i;
-        }
+        result2 = (a[i] + a[i + 1]) / 2;
         // Try the next 3-element slice
-        result = (a[i] + a[i + 1] + a[i + 2]) / 3;
+        result3 = (a[i] + a[i + 1] + a[i + 2]) / 3;
 
-        if (minAvg > result) {
-            minAvg = result;
+        minResult = (result2 < result3) ? result2 : result3;
+
+        if (minAvg > minResult) {
+            minAvg = minResult;
             minIndex = i;
         }
     }
