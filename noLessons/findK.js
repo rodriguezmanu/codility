@@ -20,26 +20,33 @@
 function solution(x, a) {
     var indexFound = 0,
         indexNotFound = 0,
-        lStart = Math.ceil(a.length/2);
+        b = new Array(a.length + 1).fill(0),
+        c = new Array(a.length + 1).fill(0);
 
-    for (var i = 0; i < lStart; i++) {
-        console.log(a[i]);
+    for (var i = 0; i < a.length; i++) {
         if (a[i] === x) {
             indexFound++;
+            b[i + 1] = b[i] + 1;
+        } else {
+            b[i + 1] = indexFound;
         }
     }
-    for (var i = lStart; i < a.length; i++) {
-        console.log(a[i]);
+
+    for (var i = a.length - 1; i >= 0; i--) {
         if (a[i] !== x) {
             indexNotFound++;
+            c[i] = c[i + 1] + 1;
+        } else {
+            c[i] = indexNotFound;
         }
     }
 
-    if (indexFound === 0) {
-        return -1;
+    for (var i = 0; i < b.length; i++) {
+        if (b[i] === c[i]) {
+            return i;
+        }
     }
-
-    return indexFound + indexNotFound;
+    return -1;
 }
 
 var a = [5, 5, 1, 7, 2, 3, 5];
