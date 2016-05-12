@@ -39,8 +39,9 @@
 function solution(a) {
     a.sort();
     if (a.length !== 0) {
+        console.log(a);
         for (var i = 0; i < a.length; i++) {
-            if (a[i] !== a[i+1]) {
+            if (a[i] !== a[i + 1]) {
                 return a[i];
             } else {
                 i++;

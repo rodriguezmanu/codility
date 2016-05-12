@@ -24,12 +24,11 @@
 
 function solution(n) {
     var binary = n.toString(2),
-        array = binary.split(''),
         count = 0,
         max = 0;
 
-    for (var i = 0; i < array.length; i++) {
-        if (array[i] == 1) {
+    for (var i = 0; i < binary.length; i++) {
+        if (binary[i] == 1) {
             if (count > max) {
                 max = count;
             }

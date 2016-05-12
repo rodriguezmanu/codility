@@ -17,7 +17,7 @@
 // P = 3, difference = |6 − 7| = 1
 // P = 4, difference = |10 − 3| = 7
 // Write a function:
-// int solution(int A[], int N);
+// function solution(A);
 // that, given a non-empty zero-indexed array A of N integers, returns the minimal difference that can be achieved.
 //
 // For example, given:
@@ -38,9 +38,9 @@
 
 function solution(a) {
     var total = 0,
-        arr = [],
         result = 0,
-        add = 0;
+        add = 0,
+        min = Number.MAX_SAFE_INTEGER;
 
     for (var i = 0; i < a.length; i++) {
         total += a[i];
@@ -49,14 +49,12 @@ function solution(a) {
         total = (total - a[i]);
         add += a[i];
         result = Math.abs((total - add));
-        arr.push(result);
+        if (result < min) {
+            min = result;
+        }
     }
-    return arr.min();
+    return min;
 }
-
-Array.prototype.min = function() {
-  return Math.min.apply(null, this);
-};
 
 var a = [3, 1, 2, 4, 3];
 

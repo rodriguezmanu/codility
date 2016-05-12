@@ -51,23 +51,25 @@
 'use strict';
 
 function solution(x, a) {
-    var f = {},
-        index = 0;
-        for (var i = 0; i < a.length; i++) {
-            if (f[a[i]] !== true) {
-                f[a[i]] = true;
-                index++;
-            }
-            if (index === x) {
-                return i;
-            }
+    var count = 0,
+        b = new Array(a.length + 1).fill(0);
+
+    for (var i = 0; i < a.length; i++) {
+        var ai = a[i];
+        if (b[ai] !== ai) {
+            b[ai] = ai;
+            count++;
         }
-        return -1;
+        if (count === x) {
+            return i;
+        }
+    }
+    return -1;
 }
 
-var a = [1, 3, 1, 4, 2, 3, 5, 4],
-    x = 5,
-    a1 = [],
-    x1 = 0;
+var a = [1, 3, 1, 4, 2, 3, 5, 4];
+var x = 5;
+// var a = [];
+// var x = 0;
 
 console.log(solution(x, a));

@@ -21,10 +21,10 @@
 'use strict';
 
 function solution(a, k) {
-    var l = a.length,
+    var n = a.length,
         c,
         i = 0;
-    if (l !== 0) {
+    if (n !== 0) {
         while (i < k) {
             c = a.pop();
             a.unshift(c);
@@ -38,6 +38,3 @@ var a = [3, 8, 9, 7, 6],
     k = 3;
 
 console.log(solution(a, k));
-
-
-

@@ -54,15 +54,15 @@ function solution(a) {
     var n = a.length,
         sum = 0,
         sumA = 0,
-        o = {};
+        b = new Array(a.length + 1).fill(0);
 
     for (var i = 0; i < a.length; i++) {
+        var ai = a[i];
         sumA += a[i];
-        if (o[a[i]] === 1) {
+        if (b[ai] === ai) {
             return 0;
-        }
-        else {
-            o[a[i]] = 1;
+        } else {
+            b[ai] = ai;
         }
     }
     sum = n * (n + 1) / 2;
@@ -77,7 +77,4 @@ var a = [4, 3, 1, 2];//1
 // var a = [4, 3, 1];//0
 // var a = [2, 3, 4];//0
 
-
 console.log(solution(a));
-
-

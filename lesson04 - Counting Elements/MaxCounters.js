@@ -69,13 +69,9 @@ var n = 5;
 console.log(solution(n,a));
 
 function solution(n, a) {
-    var b = [],
+    var b = new Array(a.length - 2).fill(0),
         max = 0,
         nextMax = 0;
-
-    for (var i = 0; i < n; i++) {
-        b[i] = 0;
-    }
 
     for (i = 0; i < a.length; i++) {
         var index = a[i] - 1;

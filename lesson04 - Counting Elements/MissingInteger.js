@@ -27,15 +27,16 @@
 // 100% verified
 
 function solution(a) {
-    var o = [];
+    var b = new Array(a.length + 1).fill(0);
 
     for (var i = 0; i < a.length; i++) {
+        var ai = a[i];
         if (a[i] > 0) {
-            o[a[i]] = 'exist';//could any value, it's just a reference
+            b[a[i]] = 1;
         }
     }
-    for (var j = 1; j < o.length; j++) {
-        if (o[j] === undefined) {
+    for (var j = 1; j < b.length; j++) {
+        if (b[j] === 0) {
             return j;
         }
     }

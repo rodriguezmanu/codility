@@ -3,7 +3,7 @@
 // Your goal is to find that missing element.
 //
 // Write a function:
-// int solution(int A[], int N);
+// function solution(A);
 // that, given a zero-indexed array A, returns the value of the missing element.
 //
 // For example, given array A such that:
@@ -26,22 +26,21 @@
 
 // 100% verified
 
-
 function solution(a) {
     var sumExp = 0,
         sum = 0,
         n = a.length + 1;
 
-        for (var i = 0; i < a.length; i++) {
-            sumExp += a[i];
-        }
-        sum = n * (n + 1) / 2;
-        return sum - sumExp;
+    for (var i = 0; i < a.length; i++) {
+        sumExp += a[i];
+    }
+    sum = n * (n + 1) / 2;
+    return sum - sumExp;
 }
 
-var a = [2, 3, 1, 5],
-    b = [2, 3, 4],
-    c = [1, 2];
-    d = [];
+var a = [2, 3, 1, 5];
+// var a = [2, 3, 4];
+// var a = [1, 2];
+// var a = [];
 
-console.log(solution(d));
+console.log(solution(a));
