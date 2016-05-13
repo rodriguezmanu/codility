@@ -31,6 +31,7 @@
 
 'use strict';
 
+//it is the same as a unit example allowing negative values
 function solution(a) {
     var maxSlice = a[0],
         maxEnding = a[0];
@@ -45,4 +46,3 @@ function solution(a) {
 var a = [3, 2, -6, 4, 0];//5
 
 console.log(solution(a));
-

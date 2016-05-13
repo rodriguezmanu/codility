@@ -53,4 +53,3 @@ function solution(a) {
 var a = [23171, 21011, 21123, 21366, 21013, 21367];//356
 
 console.log(solution(a));
-

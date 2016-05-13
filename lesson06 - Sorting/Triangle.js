@@ -39,12 +39,13 @@
 
 function solution(a) {
     var n = a.length;
-    a.sort(function(a, b){return a-b});
+    a.sort(function(a, b) {
+        return a - b
+    });
 
-    if(a.length < 3) {
+    if (a.length < 3) {
         return 0;
     }
-
     for (var i = 0; i < n - 2; i++) {
         if (a[i] + a[i + 1] > a[i + 2]) {
             return 1;
@@ -52,6 +53,6 @@ function solution(a) {
     }
     return 0;
 }
-// var a = [10, 2, 5, 1, 8, 20];//1
-var a = [10, 50, 5, 1];//0
+var a = [10, 2, 5, 1, 8, 20];//1
+// var a = [10, 50, 5, 1];//0
 console.log(solution(a));

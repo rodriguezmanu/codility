@@ -24,9 +24,11 @@
 'use strict';
 
 function solution(a) {
-
     var count = 0;
-    a.sort(function(a, b){return a-b});
+    a.sort(function(a, b) {
+        return a - b
+    });
+
     for (var i = 0; i < a.length; i++) {
         if (a[i] !== a[i - 1]) {
             count++;

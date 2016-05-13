@@ -54,7 +54,7 @@ function solution(a) {
             goingEast++;
         } else if (a[i] === 1) {
             total = goingEast + total;
-            if(total > 1000000000) {
+            if (total > 1000000000) {
                 return -1;
             }
         }

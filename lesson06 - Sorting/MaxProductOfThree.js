@@ -49,16 +49,19 @@ function solution(a) {
     var n = a.length,
         positive,
         negative;
-    a.sort(function(a, b){return b-a});
+
+    a.sort(function(a, b) {
+        return b - a
+    });
 
     //big candidate: 3 bigger positive
-    postive = a[0] * a[1] * a[2];
+    positive = a[0] * a[1] * a[2];
 
     //big candidate: 1 bigest(a[0]) positive and 2 bigger negatives turns positive
     negative = a[0] * a[n - 2] * a[n - 1];
 
     return Math.max(positive, negative);
 }
-var a = [-3, 1, 2, -2, 5, 6];
+var a = [-3, 1, 2, -2, 5, 6];//60
 // var a = [-3, -2, -1, -8];
 console.log(solution(a));

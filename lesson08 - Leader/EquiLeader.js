@@ -80,6 +80,7 @@ function solution(a) {
         if (a[i] === value) {
             countLeaders++;
         }
+        //compare in both separated parts of array if has a leader there
         if ((countLeaders > (nActual) / 2) && ((count - countLeaders) > (n - (nActual)) / 2)) {
             numLeaders++;
         }
