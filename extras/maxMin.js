@@ -1,11 +1,11 @@
 'use strict';
 
 function max(a) {
-    return a.max(a);
+    return a.max();
 }
 
 function min(a) {
-    return a.min(a);
+    return a.min();
 }
 
 function minA(argument) {
