@@ -34,7 +34,7 @@ function solution(a) {
             count++;
         }
     }
-    return count++;
+    return count;
 }
 var a = [2, 1, 1, 2, 3, 1];
 console.log(solution(a));

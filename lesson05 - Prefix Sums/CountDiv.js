@@ -43,3 +43,13 @@ var a = 6;
 var b = 11;
 var k = 2;
 console.log(solution(a, b, k));
+
+function solution1(A, B, K) {
+    if (A % K == 0) {
+        return Math.floor((B - A) / K + 1);
+    }  else {
+        return Math.floor((B - (A - A % K)) / K);
+    }
+}
+console.log(solution1(a, b, k));
+
