@@ -27,18 +27,20 @@
 'use strict';
 
 function solution(a) {
-    var stack = [];
+    var stack = [],
+        b;
     for (var i = 0; i < a.length; i++) {
         if (a[i] == '(') {
             stack.push(a[i]);
-        } else if (a[i] === ')' && stack.length !== 0) {
-            stack.pop();
         } else {
-            return 0;
+            b = stack.pop();
+            if (b !== '(' && a[i] === ')') {
+                return 0;
+            }
         }
     }
     return stack.length === 0 ? 1 : 0;
 }
 var a = '(()(())())';//1
-// var a = '())';//0
+// var a = '()())';//0
 console.log(solution(a));

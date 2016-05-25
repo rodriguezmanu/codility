@@ -1,9 +1,9 @@
 function sortAsc(a) {
-    return a.sort(function(a, b){return a-b});
+    return a.sort(function(a, b) {return a - b});
 }
 
 function sortDesc(a) {
-    return a.sort(function(a, b){return b-a});
+    return a.sort(function(a, b) {return b - a});
 }
 
 var a = [3, 5, 4];

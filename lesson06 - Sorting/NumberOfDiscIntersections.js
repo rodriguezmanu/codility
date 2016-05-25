@@ -11,7 +11,6 @@
 //   A[4] = 4
 //   A[5] = 0
 
-
 // There are eleven (unordered) pairs of discs that intersect, namely:
 
 // discs 1 and 4 intersect, and both intersect with all the other discs;

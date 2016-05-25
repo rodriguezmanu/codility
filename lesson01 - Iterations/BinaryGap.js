@@ -39,7 +39,8 @@ function solution(n) {
     }
     return max;
 }
-var n = 1041,
+var n = 74901729,
     a = 51712;
 
-console.log(solution(a));
+console.log(solution(n));//4
+console.log(solution(a));//2

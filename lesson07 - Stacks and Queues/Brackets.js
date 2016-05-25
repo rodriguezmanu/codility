@@ -25,8 +25,8 @@
 // 100% verified
 'use strict';
 
-var a = '{[()()]}';//1
-// var a = '([)()]';//0
+// var a = '{[()()]}';//1
+var a = '([)()]';//0
 // var a = '';//1
 console.log(solution(a));
 

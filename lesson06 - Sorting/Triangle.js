@@ -43,10 +43,7 @@ function solution(a) {
         return a - b
     });
 
-    if (a.length < 3) {
-        return 0;
-    }
-    for (var i = 0; i < n - 2; i++) {
+    for (var i = 0; i < n; i++) {
         if (a[i] + a[i + 1] > a[i + 2]) {
             return 1;
         }

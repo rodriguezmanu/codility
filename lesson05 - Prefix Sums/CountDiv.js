@@ -53,3 +53,19 @@ function solution1(A, B, K) {
 }
 console.log(solution1(a, b, k));
 
+// The way to solve this problem is by Prefix Sums
+// Using this technique one can subtract the count of integers between 0 and A that are divisible by K (A/K+1) from the the count of integers between 0 and B that are divisible by K (B/K+1).
+
+// Remember that A is inclusive so if it is divisible then include that as part of the result.
+
+function solution2(A, B, K) {
+    var b = B / K + 1;  // From 0 to B the integers divisible by K
+    var a = A / K + 1;  // From 0 to A the integers divisible by K
+    if (A % K == 0) { // "A" is inclusive; if divisible by K then
+        a--;        //   remove 1 from "a"
+    }
+    return Math.floor(b - a);     // return integers in range
+
+}
+console.log(solution2(a, b, k));
+

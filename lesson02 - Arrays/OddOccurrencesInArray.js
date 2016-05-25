@@ -37,9 +37,8 @@
 'use strict';
 
 function solution(a) {
-    a.sort();
+    a.sort(function(a, b) {return a - b});
     if (a.length !== 0) {
-        console.log(a);
         for (var i = 0; i < a.length; i++) {
             if (a[i] !== a[i + 1]) {
                 return a[i];
